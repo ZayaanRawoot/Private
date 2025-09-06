@@ -21,6 +21,7 @@
   
 <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
 <link rel="icon" type="image/svg+xml" href="{% static 'assets/images/export-2025-09-03 123944.svg' %}">
+
 </head>
 
 <body>
@@ -64,8 +65,10 @@
 
       <div class="footer-section newsletter">
         <h3>Newsletter</h3>
+        {% load crispy_forms_tags %}
         <form action="https://YOUR_MAILCHIMP_ACTION_URL" method="POST" target="_blank" novalidate>
           {% csrf_token %}
+          {{ form | crispy }}
           <input type="email" name="EMAIL" placeholder="Enter your email" required />
           <button type="submit">Subscribe</button>
         </form>

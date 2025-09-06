@@ -452,6 +452,7 @@
        align-items: center;
        z-index: 10;
        padding: 15px;
+       
    }
 
    .popup {
@@ -463,6 +464,10 @@
        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
        box-sizing: border-box;
        position: relative;
+   }
+
+   .popup form{
+    margin-top: 500px;
    }
 
    .popup h3 {

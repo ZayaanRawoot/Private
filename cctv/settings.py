@@ -141,4 +141,4 @@ EMAIL_HOST_PASSWORD = 'your_app_password'  # Use Gmail app password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CRISPY_ALLOWED_TEMPLATES_PACKS = 'bootstrap5'
-CRISPY_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'

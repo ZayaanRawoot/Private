@@ -1,8 +1,9 @@
 
 {% extends 'base.html' %}
-{%load static%}
-{%block content%}
-{%block title%}DSTV &amp; CCTV Installation Services in Cape Town | Cape Multi View{%endblock title%}
+{% load static %}
+{% block title %}DSTV &amp; CCTV Installation Services in Cape Town | Cape Multi View{% endblock title %}
+{% block content %}
+
 
   <main>
     <section id="about" class="about-section fade-in about">
@@ -93,9 +94,10 @@
   <div class="popup-overlay" id="popup">
     <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
       <button class="close-btn" aria-label="Close popup" onclick="closePopup()">&times;</button>
+      {% load crispy_forms_tags %}
       <form method="POST" action="{% url 'contact' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form | crispy }}
 
   <button type="submit">Submit</button>
 </form>

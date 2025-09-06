@@ -1,0 +1,104 @@
+
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+{%block title%}DSTV &amp; CCTV Installation Services in Cape Town | Cape Multi View{%endblock title%}
+
+  <main>
+    <section id="about" class="about-section fade-in about">
+      <div class="about-content">
+        <div class="center">
+          <h2>About Us</h2>
+        </div>
+        <div class="content">
+          <p>
+            At <strong>Cape Multi View</strong>, we don't just install cables and cameras — we connect homes, protect
+            families, and bring the future of digital entertainment and security into your space. With years of hands-on
+            experience in <strong>DSTV installation</strong> and <strong>CCTV surveillance systems</strong>, we&apos;ve
+            built a reputation for precision, professionalism, and personalized service.
+          </p>
+          <p>
+            Whether you're tuning in for the big game, installing home security for peace of mind, or upgrading your
+            satellite system for the clearest signal in Cape Town, our team of certified technicians has your back. We
+            combine cutting-edge technology with old-fashioned customer service — because we believe great service never
+            goes out of style.
+          </p>
+          <p>
+            From large commercial CCTV setups to custom DSTV installations for cozy homes, no project is too big or too
+            small. When you choose Cape Multi View, you&apos;re choosing clarity, reliability, and a partner that cares
+            about every pixel of your experience.
+          </p>
+          <p>
+            <em>Your signal is our mission. Your security is our promise.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="fade-in services-section">
+      <video autoplay muted loop id="bg-video">
+  <source src="{% static 'assets/videos/0902(1).mp4' %}" type="video/mp4">
+</video>
+      <div class="content1">
+        <h2>Our Services</h2>
+        <div class="services-container">
+          <div class="service-box">
+            <h3>DSTV Installation</h3>
+            <p>High-quality satellite installation, setup, and signal troubleshooting.</p>
+          </div>
+          <div class="service-box">
+            <h3>CCTV Installation</h3>
+            <p>Secure your home or business with professional camera systems.</p>
+          </div>
+          <div class="service-box">
+            <h3>Maintenance &amp; Repairs</h3>
+            <p>We maintain and repair existing systems to keep them running optimally.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="why">
+      <h2>Why Choose Us</h2>
+      <div class="wrapper">
+        <ul id="why-list">
+          <li>
+            <span style="color: #007BFF; font-size: 1.5rem; margin-right: 10px;"><img src="{%static 'assets/images/icons8-expert-50.png'%}" alt=""></span>
+            <div>
+              <strong>Expert Technicians</strong>
+              <p style="margin: 5px 0 0;">Certified professionals who know the job inside and out.</p>
+            </div>
+          </li>
+          <li>
+            <span style="color: #007BFF; font-size: 1.5rem; margin-right: 10px;"><img src="{% static 'assets/images/icons8-fast-50.png'%}" alt=""></span>
+            <div>
+              <strong>Fast Response</strong>
+              <p style="margin: 5px 0 0;">We prioritize customer satisfaction with fast and effective service.</p>
+            </div>
+          </li>
+          <li>
+            <span style="color: #007BFF; font-size: 1.5rem; margin-right: 10px;"><img src="{%static 'assets/images/icons8-money-50.png'%}" alt=""></span>
+            <div>
+              <strong>Affordable Pricing</strong>
+              <p style="margin: 5px 0 0;">Top-tier services that won&apos;t break your budget.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Popup Contact Form -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <button class="close-btn" aria-label="Close popup" onclick="closePopup()">&times;</button>
+      <form method="POST" action="{% url 'contact' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <button type="submit">Submit</button>
+</form>
+    </div>
+  </div>
+{% endblock content %}

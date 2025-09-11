@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'contact', 
     'crispy_forms', 
-    'crispy_bootstrap5'
+    'crispy_bootstrap5',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -136,9 +137,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your_email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your_app_password'  # Use Gmail app password
+EMAIL_HOST_USER = 'info@capemultiview.co.za'
+EMAIL_HOST_PASSWORD = 'franslaan94cer'  
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 CRISPY_ALLOWED_TEMPLATES_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'

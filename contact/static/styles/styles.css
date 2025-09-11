@@ -1,569 +1,569 @@
-   body {
-       margin: 0;
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       color: #333;
-       background-color: #f7f9fc;
-   }
-
-   header {
-       position: relative;
-       height: 100vh;
-       overflow: hidden;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       color: white;
-       text-align: center;
-   }
-
-   .slider {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       z-index: -1;
-       animation: slideShow 30s infinite;
-       background-size: cover;
-       background-position: center;
-   }
-
-   @keyframes slideShow {
-
-       0%,
-       33% {
-           background-image: url('../assets/images/cctv-installer-cape-town.jpg');
-       }
-
-       34%,
-       66% {
-           background-image: url('https://www.intervid-africa.co.za/wp-content/uploads/Types-of-CCTV-Cameras-Surveillance-Cameras.webp');
-       }
-
-       67%,
-       100% {
-           background-image: url('https://cctvmaintenance.com.sg/wp-content/uploads/2025/06/How-do-I-know-if-my-CCTV-is-on-or-off.jpeg');
-       }
-   }
-
-   .hero-content {
-       background: rgba(0, 0, 0, 0.5);
-       padding: 2rem;
-       border-radius: 10px;
-       max-width: 600px;
-       margin: 0 15px;
-   }
-
-   nav h1 {
-       font-size: 26px;
-       margin: 0;
-
-   }
-
-   nav {
-       background-color: #007BFF;
-       align-items: center;
-       position: fixed;
-       z-index: 100;
-       top: 0px;
-       left: 0;
-       right: 0;
-       display: flex;
-       justify-content: space-between;
-       padding: 35px 40px;
-       color: white;
-       flex-wrap: wrap;
-       gap: 10px;
-   }
-
-   nav a {
-       color: white;
-       text-decoration: none;
-       margin-left: 15px;
-       font-weight: bold;
-   }
-
-   section {
-       padding: 60px 20px;
-       max-width: 1200px;
-       margin: auto;
-   }
-
-   h2 {
-       color: #007BFF;
-       text-align: center;
-       margin-bottom: 20px;
-   }
-
-   /* Fade in animation */
-   .fade-in {
-       opacity: 0;
-       transform: translateY(20px);
-       animation-fill-mode: forwards;
-       animation-timing-function: ease-out;
-       animation-duration: 1s;
-       animation-play-state: paused;
-       /* Start paused, will play via JS */
-   }
-
-   .fade-in.about {
-       animation-delay: 0.2s;
-   }
-
-   .fade-in.services {
-       animation-delay: 0.6s;
-   }
-
-   .wrapper {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-       padding: 0;
-       margin: 0 auto;
-       max-width: 1200px;
-       text-align: center;
-   }
-
-   #why-list {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       gap: 60px;
-       padding: 0;
-       margin: 0 auto;
-       align-items: center;
-       list-style: none;
-       max-width: 1200px;
-   }
-
-   #why-list li {
-
-       opacity: 0;
-       transform: translateY(20px);
-       animation-fill-mode: forwards;
-       animation-timing-function: ease-out;
-       animation-duration: 0.8s;
-       list-style: none;
-       background: #fff;
-       width: 300px;
-       height: 140px;
-       padding: 15px 20px;
-       margin-bottom: 15px;
-       border-radius: 8px;
-       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-       /* align-items: flex-start; */
-       animation-play-state: paused;
-       /* will start on load */
-   }
-
-   .service-box {
-       background: white;
-       border-radius: 10px;
-       padding: 25px 20px;
-       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-       flex: 1 1 300px;
-       margin: 15px;
-       z-index: 100;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-       cursor: default;
-   }
-
-   .service-box:hover {
-       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-       transform: translateY(-5px);
-   }
-
-   .about-section {
-
-       max-width: 100vw;
-       background: #ffffff;
-       padding: 0;
-       color: #333;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-   }
-
-   .about-content {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       align-content: center;
-       height: 450px;
-       max-width: 100vw;
-       width: 100%;
-       margin: 0 auto;
-       padding: 65px;
-       box-sizing: border-box;
-       background-color: #fafafa17;
-       border-radius: 10px;
-       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-       animation-fill-mode: forwards;
-   }
-
-   .about-content .content {
-       width: 950px;
-       border-radius: 15px;
-       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-       padding: 15px;
-       font-size: 14px;
-   }
-
-   .about-content h2 {
-       color: #007BFF;
-       font-size: 3.5rem;
-       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-       margin-bottom: 20px;
-       text-align: center;
-   }
-
-   .about-content p {
-       line-height: 1.5;
-       font-size: 1.05rem;
-       margin-bottom: 18px;
-   }
-
-   .about-content .center {
-       position: relative;
-       top: 60px;
-       left: 20px;
-       width: 250px;
-   }
-
-   .about-content strong {
-       color: #0056b3;
-   }
-
-   .about-content em {
-       font-style: italic;
-       font-weight: bold;
-       display: block;
-       margin-top: 20px;
-       text-align: center;
-       color: #007BFF;
-   }
-
-   #bg-video {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-       z-index: -1;
-
-   }
-
-   .content1 {
-       position: relative;
-       z-index: 1;
-       /* Higher than video */
-       color: rgb(15, 15, 15);
-       text-align: center;
-       padding: 50px 20px
-   }
-
-   #services {
-       position: relative;
-       height: 500px;
-       /* Adjust height as needed */
-       overflow: hidden;
-   }
-
-   /* Services section full width with background */
-   .services-section {
-
-       max-width: 100vw;
-       /* full viewport width */
-       align-content: center;
-       height: 750px;
-       margin: 0;
-       background: url('../assets/videos/0902\(1\).mp4') no-repeat center center / cover;
-       padding: 40px 0;
-       box-sizing: border-box;
-       color: #222;
-   }
-
-   /* constrain content and center */
-   .services-section h2 {
-       max-width: 1200px;
-       margin: 0 auto 40px;
-       color: white;
-       text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-       text-align: center;
-       font-weight: 600;
-       font-size: 36px;
-   }
-
-   /* container for service boxes */
-   .services-container {
-       max-width: 1200px;
-       margin: 0 auto;
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       gap: 30px;
-       justify-content: center;
-   }
-
-   /* individual service boxes */
-   .service-box {
-       background: white;
-       border-radius: 10px;
-       padding: 25px 20px;
-       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-       flex: 1 1 300px;
-       min-width: 280px;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-       cursor: default;
-   }
-
-   .service-box:hover {
-       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-       transform: translateY(-5px);
-   }
-
-   /* Fade-in animation */
-   .fade-in.services-section {
-       opacity: 0;
-       transform: translateY(20px);
-       animation: fadeInUp 1s ease forwards;
-       animation-delay: 0.6s;
-   }
-
-   /* FadeInUp keyframes */
-   @keyframes fadeInUp {
-       to {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   }
-
-   /* Responsive for smaller screens */
-   @media (max-width: 768px) {
-       .services-container {
-           flex-direction: column;
-           align-items: center;
-       }
-
-       .service-box {
-           width: 90%;
-       }
-   }
-
-   @media (max-width: 768px) {
-       .wrapper {
-           grid-template-columns: repeat(1, 1fr);
-       }
-   }
-
-   footer {
-       background: #007BFF;
-       color: white;
-       padding: 40px 20px;
-       text-align: center;
-   }
-
-   /* Footer Contact & Social */
-   .footer-container {
-       max-width: 1200px;
-       margin: auto;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: flex-start;
-       /* align left */
-       gap: 40px;
-       align-items: flex-start;
-       text-align: left;
-   }
-
-   .footer-section {
-       flex: 1 1 280px;
-       min-width: 250px;
-   }
-
-   .footer-section h3 {
-       margin-bottom: 15px;
-       font-size: 1.3rem;
-       border-bottom: 2px solid #0056b3;
-       padding-bottom: 5px;
-   }
-
-   .footer-contact p,
-   .footer-contact a {
-       margin: 8px 0;
-       color: white;
-       text-decoration: none;
-       font-size: 1rem;
-       display: block;
-   }
-
-   .footer-social a {
-       display: inline-block;
-       margin-right: 15px;
-       font-size: 1.8rem;
-       color: white;
-       text-decoration: none;
-       transition: color 0.3s ease;
-   }
-
-   .footer-social a:hover {
-       color: #004095;
-   }
-
-   .newsletter form {
-       display: flex;
-       flex-wrap: wrap;
-       gap: 10px;
-       align-items: center;
-   }
-
-   .newsletter input[type="email"] {
-       flex-grow: 1;
-       min-width: 180px;
-       padding: 10px;
-       border: none;
-       border-radius: 5px;
-       font-size: 1rem;
-   }
-
-   .newsletter button {
-       padding: 10px 20px;
-       border: none;
-       background-color: #0056b3;
-       color: white;
-       border-radius: 5px;
-       cursor: pointer;
-       transition: background-color 0.3s ease;
-   }
-
-   .newsletter button:hover {
-       background-color: #004095;
-   }
-
-   /* Popup styles */
-   .popup-overlay {
-       position: fixed;
-       top: 0;
-       left: 0;
-       right: 0;
-       bottom: 0;
-       background: rgba(0, 0, 0, 0.5);
-       display: none;
-       justify-content: center;
-       align-items: center;
-       z-index: 10;
-       padding: 15px;
-       
-   }
-
-   .popup {
-       background: white;
-       padding: 30px 25px;
-       border-radius: 10px;
-       max-width: 450px;
-       width: 100%;
-       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-       box-sizing: border-box;
-       position: relative;
-   }
-
-   .popup form{
-    margin-top: 500px;
-   }
-
-   .popup h3 {
-       margin-top: 0;
-       margin-bottom: 15px;
-       color: #007BFF;
-       text-align: center;
-   }
-
-   .close-btn {
-       position: absolute;
-       top: 15px;
-       right: 15px;
-       font-size: 24px;
-       cursor: pointer;
-       color: #007BFF;
-       font-weight: bold;
-       line-height: 1;
-   }
-
-   input[type="email"],
-   input[type="text"],
-   input[type="tel"],
-   select,
-   textarea {
-       padding: 10px;
-       border: 1px solid #ddd;
-       border-radius: 5px;
-       font-size: 1rem;
-       width: 100%;
-       box-sizing: border-box;
-       margin: 10px 0;
-       resize: vertical;
-   }
-
-   button {
-       padding: 10px 20px;
-       border: none;
-       background-color: #0056b3;
-       color: white;
-       border-radius: 5px;
-       cursor: pointer;
-       transition: background-color 0.3s ease;
-   }
-
-   button:hover {
-       background-color: #004095;
-   }
-
-   /* Responsive Nav */
-   @media (max-width: 768px) {
-       nav {
-           flex-direction: column;
-           align-items: center;
-           gap: 10px;
-       }
-
-       .services,
-       #why-list {
-           flex-direction: column;
-           align-items: center;
-       }
-
-       .footer-container {
-           flex-direction: column;
-           align-items: flex-start;
-       }
-
-       .service-box {
-           margin: 15px 0;
-       }
-
-       .newsletter form {
-           flex-direction: column;
-           align-items: stretch;
-       }
-
-       .newsletter input[type="email"] {
-           min-width: unset;
-       }
-
-       #services {
-           padding: 60px 15px;
-           margin: 0 -15px;
-       }
-   }
-
-   /* Animations */
-   @keyframes fadeInUp {
-       from {
-           opacity: 0;
-           transform: translateY(20px);
-       }
-
-       to {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   }
+/* === General Styles === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f7f9fc;
+}
+
+/* === Header & Hero Section === */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: slideShow 30s infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes slideShow {
+    0%, 33% {
+        background-image: url('../assets/images/cctv-installer-cape-town.jpg');
+    }
+    34%, 66% {
+        background-image: url('https://www.intervid-africa.co.za/wp-content/uploads/Types-of-CCTV-Cameras-Surveillance-Cameras.webp');
+    }
+    67%, 100% {
+        background-image: url('https://cctvmaintenance.com.sg/wp-content/uploads/2025/06/How-do-I-know-if-my-CCTV-is-on-or-off.jpeg');
+    }
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 15px;
+    z-index: 1;
+}
+
+/* === Navigation === */
+nav {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 40px;
+    color: white;
+    z-index: 50;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.my_align{
+    vertical-align: middle;
+}
+
+nav h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav .links{
+    justify-content: space-around;
+    gap: 30px;
+    width: 400px;
+}
+/* === Section Styling === */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* === Fade-in Animation === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-play-state: paused;
+}
+
+.fade-in.about {
+    animation-delay: 0.2s;
+}
+
+.fade-in.services {
+    animation-delay: 0.6s;
+}
+
+/* === Wrapper & Lists === */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#why-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    max-width: 1200px;
+}
+
+#why-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.8s;
+    background: #fff;
+    width: 300px;
+    height: 180px;
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    animation-play-state: paused;
+}
+
+/* === Service Boxes === */
+.service-box {
+    background: white;
+    border-radius: 10px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    margin: 15px;
+    min-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    height: 165px;
+    align-content: center;
+}
+
+.service-box h3,p{
+    text-align: center;
+}
+
+.service-box:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* === About Section === */
+.about-section {
+    max-width: 100vw;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 65px;
+    background-color: #fafafa17;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-content .content {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    font-size: 14px;
+}
+
+.about-content h2 {
+    font-size: 3.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.5;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+.about-content .center {
+    position: relative;
+    top: 60px;
+    left: 20px;
+    width: 250px;
+}
+
+.about-content strong {
+    color: #0056b3;
+}
+
+.about-content em {
+    font-style: italic;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+}
+
+/* === Background Video === */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* === Services Section === */
+#services {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 15px;
+    margin: 0;
+}
+
+.content1{
+    position: relative;
+    top: 160px;
+    align-items: center;
+}
+.services-section {
+    max-width: 100vw;
+    height: 750px;
+    margin: 0;
+    background: url('../assets/videos/0902(1).mp4') no-repeat center center / cover;
+    padding: 40px 0;
+    box-sizing: border-box;
+    color: #222;
+}
+
+.services-section h2 {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* === Fade-in Services === */
+.fade-in.services-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Footer === */
+footer {
+    background: #007BFF;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1 1 280px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+.footer-contact p,
+.footer-contact a {
+    margin: 8px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #004095;
+}
+
+/* === Newsletter === */
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    flex-grow: 1;
+    min-width: 180px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #004095;
+}
+
+/* === Popup === */
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 15px;
+}
+
+.popup {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.popup h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ff00aa;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007BFF;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* === Form Inputs === */
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004095;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    #why-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter input[type="email"] {
+        min-width: unset;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .about-content .center {
+        top: 20px;
+        left: 0;
+        margin: auto;
+    }
+}
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #007BFF;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+/* Optional fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
